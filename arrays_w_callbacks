@@ -1,0 +1,514 @@
+
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0]
+
+const panagram = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+
+
+
+// Every
+
+// Part 1
+
+const greater = (num) => (num >= 0);
+
+
+nums.every(greater)
+
+
+console.log(greater(nums))
+
+// Part 2
+
+const shorter = (word) => word.length < 8;
+
+
+panagram.every(shorter)
+
+
+console.log(shorter(panagram))
+
+
+
+
+// Filter
+
+// Part 1
+
+const lessThanFour = (num) => num < 4
+
+
+const filterArr = nums.filter(lessThanFour)
+
+
+console.log(filterArr)
+
+// Part 2
+
+
+const evenLength = (word) => (word.length % 2 === 0)
+
+
+const filterWordArr = panagram.filter(evenLength)
+
+
+console.log(filterWordArr)
+
+
+
+// Find
+
+// Part 1
+
+const divisByFive = nums.find(num => num % 5 === 0)
+
+
+console.log(divisByFive)
+
+// Part 2
+
+const longerThanFive = (word) => (word.length > 5)
+
+
+const longestWord = panagram.find(longerThanFive)
+
+
+console.log(longestWord)
+
+
+
+// Find Index
+
+// Part 1
+
+const firstNumIndex = (num) => (num % 3 === 0);
+
+
+console.log(nums.findIndex(firstNumIndex))
+
+// Part 2
+
+const firstWordIndex = (word) => (word.length < 2)
+
+
+console.log(panagram.findIndex(firstWordIndex))
+
+
+// For Each
+
+// Part 1
+
+let threeTimes = []
+
+
+nums.forEach(multiplyByThree = (nums) => {
+
+
+   threeTimes.push(nums * 3);
+
+
+})
+
+
+console.log(threeTimes)
+
+// Part 2
+
+let screaming = []
+
+
+panagram.forEach(exclamation = (word) => {
+
+
+   if (word.includes('!')) {
+
+
+     screaming.push(word);
+
+
+ }
+
+
+})
+
+
+console.log(screaming)
+
+
+// Map
+
+// Part 1
+
+const hundredTimes = nums.map(num => num * 100);
+
+
+console.log(hundredTimes);
+
+// Part 2
+
+const capLetters = panagram.map(word => word.toUpperCase());
+
+
+console.log(capLetters);
+
+// Some 
+
+// Part 1
+
+const divisibleBySeven = (num) => num % 7 === 0;
+
+
+console.log(nums.some(divisibleBySeven));
+
+
+// Part 2
+
+
+const letterAWords = (word) => word.includes('a');
+
+
+console.log(panagram.some(letterAWords)); 
+
+
+
+// Panagram
+
+let hasLetters = (arr) => {
+
+
+ let splitArr = arr.join('').toLowerCase()
+
+
+ if(splitArr.match('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')) {
+
+
+
+   return true
+
+
+ } else {
+
+
+   return false
+
+
+ }
+
+
+}
+
+
+console.log(hasLetters(panagram))
+
+
+
+
+
+
+// Working with Data
+//(Not Finished)
+
+const products = [
+
+
+ {
+
+
+   "name": "allen wrench",
+
+
+   "price": 2.99,
+
+
+   "description": "handy tool"
+
+
+ },
+
+
+ {
+
+
+   "name": "cornucopia",
+
+
+   "price": 5.99,
+
+
+   "description": "festive holiday decoration"
+
+
+ },
+
+
+ {
+
+
+   "name": "banana",
+
+
+   "price": 0.99,
+
+
+   "description": "full of potassium"
+
+
+ },
+
+
+ {
+
+
+   "name": "guillotine (cigar)",
+
+
+   "price": 10.59,
+
+
+   "description": "behead your stub"
+
+
+ },
+
+
+ {
+
+
+   "name": "jack-o-lantern",
+
+
+   "price": 3.99,
+
+
+   "description": "spooky seasonal fun"
+
+
+ },
+
+
+ {
+
+
+   "name": "doggie treat (box)",
+
+
+   "price": 5.99,
+
+
+   "description": "fido loves 'em"
+
+
+ },
+
+
+ {
+
+
+   "name": "egg separator",
+
+
+   "price": 3.99,
+
+
+   "description": "it separates yolks from whites"
+
+
+ },
+
+
+ {
+
+
+   "name": "LED lightbulb",
+
+
+   "price": 6.55,
+
+
+   "description": "It's super-efficient!"
+
+
+ },
+
+
+ {
+
+
+   "name": "owl pellets",
+
+
+   "price": 3.99,
+
+
+   "description": "Don't ask what they used to be."
+
+
+ },
+
+
+ {
+
+
+   "name": "flag",
+
+
+   "price": 5.99,
+
+
+   "description": "catches the breeze"
+
+
+ },
+
+
+ {
+
+
+   "name": "hair brush",
+
+
+   "price": 6.99,
+
+
+   "description": "fine boar bristles"
+
+
+ },
+
+
+ {
+
+
+   "name": "iridium (one gram)",
+
+
+   "price": 19.36,
+
+
+   "description": "corrosion-resistant metal"
+
+
+ },
+
+
+ {
+
+
+   "name": "quark",
+
+
+   "price": 0.01,
+
+
+   "description": "Very small"
+
+
+ },
+
+
+ {
+
+
+   "name": "turtleneck",
+
+
+   "price": 19.99,
+
+
+   "description": "available in black and slightly-darker black"
+
+
+ },
+
+
+ {
+
+
+   "name": "kaleidoscope",
+
+
+   "price": 8.25,
+
+
+   "description": "tube with moving plastic pieces inside"
+
+
+ },
+
+
+ {
+
+
+   "name": "mitt (leather)",
+
+
+   "price": 15,
+
+
+   "description": "regulation sized"
+
+
+ },
+
+
+ {
+
+
+   "name": "nothing",
+
+
+   "price": 10,
+
+
+   "description": "Hey, if you pay us, we won't ask any questions."
+
+
+ },
+
+
+ {
+
+
+   "name": "violin",
+
+
+   "price": 2000,
+
+
+   "description": "Talk about a JS fiddle..."
+
+
+ },
+
+
+ {
+
+
+   "name": "yoyo",
+
+
+   "price": 1,
+
+
+   "description": "We had to pull some strings to get this one in."
+
+
+ },
+
+
+ {
+
+
+   "name": "pincushion",
+
+
+   "price": 1.99,
+
+
+   "description": "You'll get 'stuck' on it"
+
+
+ },
+
+
+]
